@@ -1,0 +1,93 @@
+body.tmr {
+  margin: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+  height: 100vh;
+  padding-bottom: 30vh;
+  * {
+    box-sizing: border-box;
+  }
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+      padding: 6px 15px;
+      background-color: #fefefe;
+      font-weight: 600;
+      color: #0a0a0a;
+      transition: all ease-in-out 0.3s;
+      position: relative;
+      &:active {
+        top: 1px;
+      }
+      &:hover {
+        background-color: crimson;
+        color: #fef;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 40px;
+  }
+  .form {
+    display: flex;
+    gap: 10px;
+    &__input {
+      flex-grow: 1;
+      padding: 0 15px;
+      font-size: 20px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid rgba(#fff, 0.4);
+      &:focus,
+      &:active {
+        border-color: #fff;
+      }
+    }
+    &__button {
+      width: 90px;
+      height: 40px;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      background-color: crimson;
+      cursor: pointer;
+      color: #fff;
+      &:disabled {
+        cursor: auto;
+        filter: grayscale(100%);
+      }
+    }
+  }
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 40px;
+    border: 2px solid #fff;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .value {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .label {
+    font-style: italic;
+    font-size: 20px;
+  }
+  
+}
