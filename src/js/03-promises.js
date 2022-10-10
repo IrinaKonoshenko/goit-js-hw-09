@@ -12,7 +12,7 @@ form.addEventListener('submit', async event => {
   const step = parseInt(inputStep.value);
   const amount = parseInt(inputAmount.value);
 
-  for (let i = 0; i < amount; i++) {
+  for (let i = 1; i < amount; i++) {
     /**
      * Другой вариант решения
      */
