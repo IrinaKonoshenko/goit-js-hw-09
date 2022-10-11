@@ -12,7 +12,7 @@ form.addEventListener('submit', async event => {
   const step = parseInt(inputStep.value);
   const amount = parseInt(inputAmount.value);
 
-  for (let i = 1; i < amount; i++) {
+  for (let i = 1; i <= amount; i++) {
     /**
      * Другой вариант решения
      */
@@ -24,7 +24,7 @@ form.addEventListener('submit', async event => {
     //   console.log(`❌ Rejected promise ${error.position} in ${error.delay}ms`);
     // }
 
-    createPromise(i, delay + step * i)
+    createPromise(i, delay + step * (i - 1))
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
